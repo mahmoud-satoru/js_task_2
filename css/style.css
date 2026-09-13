@@ -1,0 +1,17 @@
+form{
+    width: 50%;
+    background-color: rgb(246, 250, 228);
+    min-width: 280px;
+    border-radius: 10px;
+    padding-inline: 20px;
+}
+
+form h1{
+    font-size: 25px;
+    color: var(--main);
+    margin-block: 25px;
+}
+
+form i{
+    color: var(--main);
+}

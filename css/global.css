@@ -1,0 +1,12 @@
+body{
+    background: linear-gradient(to right, rgb(87, 123, 138),rgb(5, 32, 44)) ;
+    background: #291e0f;
+}
+
+:root {
+  --main: #AF8745;
+}
+
+::placeholder {
+  color: #291e0f !important;
+}
