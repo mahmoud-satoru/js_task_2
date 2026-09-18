@@ -9,7 +9,6 @@ let regex = {
     phone: /^01[0-5][0-9]{8}$/,
 
     secondName: /^[A-Za-z]+$/
-
 };
 
 function get_std(){
@@ -164,4 +163,34 @@ function editStudent(id) {
 
     let submit_btn = document.querySelector("#register button");
     submit_btn.textContent = "Update";
+}
+
+function search() {
+
+    let search_value = search_input.value.trim().toLowerCase();
+
+    let rows = table_body.querySelectorAll("tr");
+
+    my_students.forEach(function(student, index) {
+
+        let first_name = student.firstName.toLowerCase();
+        let second_name = student.secondName.toLowerCase();
+        let email = student.email.toLowerCase();
+        let phone = student.phone.toLowerCase();
+
+        let is_match =
+            first_name.includes(search_value) ||
+            second_name.includes(search_value) ||
+            email.includes(search_value) ||
+            phone.includes(search_value);
+
+        if (is_match) {
+            rows[index].style.display = "";
+        }
+        else {
+            rows[index].style.display = "none";
+        }
+
+    });
+
 }
