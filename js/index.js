@@ -4,7 +4,8 @@ my_students=[],
 id=0,
 table_body = document.querySelector("tbody"),
 input_valid = document.querySelector("input.is-invalid"),
-edit_id = null;;
+edit_id = null;
+let search_input = document.querySelector('input[name="Search"]');
 
 if(localStorage.getItem("my_students") === null) {
     update_localStorage();
@@ -135,3 +136,4 @@ register_form.addEventListener("submit", function(e){
     this.reset();
 });
 
+search_input.addEventListener("input", search);
